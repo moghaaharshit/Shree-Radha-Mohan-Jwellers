@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Account Deletion Request — Shree Radha Mohan Jewellers</title>
+<meta name="description" content="How to delete your Shree Radha Mohan Jewellers account: delete it inside the app, or send a deletion request by email." />
+<style>
+  :root {
+    --maroon: #6b1220;
+    --maroon-deep: #4a0c16;
+    --gold: #b8893a;
+    --gold-soft: #e8d6b0;
+    --ink: #2a1d1a;
+    --ink-soft: #6b5b56;
+    --paper: #fdfaf4;
+    --card: #ffffff;
+    --line: #eee3d2;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: var(--maroon); }
+
+  /* ---------- Header ---------- */
+  .hero {
+    background:
+      radial-gradient(circle at 15% 0%, rgba(184, 137, 58, 0.35), transparent 55%),
+      linear-gradient(135deg, var(--maroon-deep) 0%, var(--maroon) 55%, #7a1a29 100%);
+    color: #fff;
+    padding: 54px 20px 46px;
+    text-align: center;
+    border-bottom: 3px solid var(--gold);
+  }
+
+  .hero .mark {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(232, 214, 176, 0.65);
+    background: rgba(255, 255, 255, 0.07);
+    font-size: 26px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(23px, 5vw, 36px);
+    letter-spacing: 0.3px;
+    margin: 0 0 8px;
+    font-weight: 700;
+  }
+
+  .hero p {
+    margin: 0;
+    color: var(--gold-soft);
+    font-size: 13.5px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+
+  .hero .app {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 7px 16px;
+    border: 1px solid rgba(232, 214, 176, 0.5);
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.15);
+    letter-spacing: 0.4px;
+  }
+
+  /* ---------- Layout ---------- */
+  .wrap {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 20px 70px;
+  }
+
+  .intro {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--gold);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: -28px 0 28px;
+    box-shadow: 0 10px 30px rgba(74, 12, 22, 0.06);
+    position: relative;
+    z-index: 2;
+  }
+
+  .intro p { margin: 0 0 10px; }
+  .intro p:last-child { margin-bottom: 0; }
+
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--line);
+  }
+
+  .meta strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- Cards ---------- */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 22px 18px;
+    margin: 18px 0;
+    box-shadow: 0 6px 18px rgba(74, 12, 22, 0.04);
+  }
+
+  .card-head {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .step-badge {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: var(--maroon);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 19px;
+    color: var(--maroon);
+    margin: 0;
+    line-height: 1.35;
+  }
+
+  .tag {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: #f0e6d2;
+    color: var(--gold);
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin: 18px 0 6px;
+    color: var(--ink);
+  }
+
+  p { margin: 0 0 12px; }
+
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  /* ---------- Email block ---------- */
+  .mail-box {
+    background: linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+    color: #fff;
+    border-radius: 14px;
+    padding: 22px;
+    margin: 16px 0;
+    text-align: center;
+  }
+
+  .mail-box .label {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--gold-soft);
+    margin-bottom: 8px;
+  }
+
+  .mail-box a.address {
+    display: inline-block;
+    font-size: clamp(15px, 4.4vw, 21px);
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    word-break: break-all;
+    border-bottom: 1px dashed rgba(232, 214, 176, 0.75);
+    padding-bottom: 3px;
+  }
+
+  .mail-box .sub {
+    margin: 12px 0 0;
+    font-size: 13px;
+    color: var(--gold-soft);
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 22px;
+    border-radius: 999px;
+    background: var(--gold);
+    color: #2a1d1a;
+    font-weight: 700;
+    font-size: 14.5px;
+    text-decoration: none;
+  }
+
+  .btn.ghost {
+    background: transparent;
+    color: #fff;
+    border: 1px solid rgba(232, 214, 176, 0.7);
+    font-weight: 600;
+  }
+
+  .btn + .btn { margin-left: 8px; }
+
+  /* ---------- Template ---------- */
+  .template {
+    background: #fbf4e6;
+    border: 1px solid var(--gold-soft);
+    border-radius: 12px;
+    padding: 16px 18px;
+    margin: 14px 0;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.75;
+    white-space: pre-wrap;
+    color: #4a3a30;
+  }
+
+  .note {
+    background: #fbf4e6;
+    border: 1px solid var(--gold-soft);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 16px 0;
+    font-size: 14.5px;
+  }
+
+  .note strong { color: var(--maroon); }
+
+  /* ---------- Table ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 12px 0 18px;
+    font-size: 14.5px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 11px 13px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  th {
+    background: #f7efe2;
+    color: var(--maroon);
+    font-size: 12.5px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  .part-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 2.4px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin: 38px 0 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact {
+    background: linear-gradient(135deg, var(--maroon-deep), var(--maroon));
+    color: #fff;
+    border-radius: 14px;
+    padding: 24px 22px;
+    margin-top: 28px;
+  }
+
+  .contact h2 { color: #fff; margin: 0 0 8px; font-size: 20px; }
+  .contact a { color: var(--gold-soft); font-weight: 600; }
+  .contact p { margin-bottom: 8px; }
+  .contact p:last-child { margin-bottom: 0; }
+
+  footer {
+    text-align: center;
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    padding: 26px 20px 40px;
+    border-top: 1px solid var(--line);
+    background: #faf5ec;
+  }
+
+  footer a { color: var(--maroon); }
+
+  .top {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 12.5px;
+    color: var(--maroon);
+    text-decoration: none;
+  }
+
+  @media (max-width: 520px) {
+    .intro { padding: 16px; }
+    .card { padding: 18px 16px 14px; }
+    th, td { padding: 9px 10px; font-size: 13.5px; }
+    .btn + .btn { margin-left: 0; margin-top: 10px; }
+    .card h2 { font-size: 17.5px; }
+  }
+
+  @media print {
+    .hero { background: #fff; color: #000; border-bottom: 2px solid #000; }
+    .hero p, .hero .app { color: #333; }
+    .mail-box, .contact { background: #fff; color: #000; border: 1px solid #000; }
+    .mail-box a.address, .mail-box .label, .mail-box .sub,
+    .contact h2, .contact a { color: #000; }
+    .btn, .top { display: none; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="mark">&#10047;</div>
+  <h1>Delete Your Account</h1>
+  <p>Shree Radha Mohan Jewellers</p>
+  <div class="app">Android App &middot; com.shreeradhamohan.jewellers</div>
+</header>
+
+<div class="wrap">
+
+  <div class="intro">
+    <p>
+      You can delete your <strong>Shree Radha Mohan Jewellers</strong> account and the personal data
+      linked to it at any time. There are two ways to do it: <strong>inside the app</strong>
+      (fastest), or by sending us an <strong>email request</strong>.
+    </p>
+    <p>Both options are free, and neither requires you to give a reason.</p>
+    <div class="meta">
+      <span><strong>App:</strong> Shree Radha Mohan Jewellers</span>
+      <span><strong>Developer:</strong> Shree Radha Mohan Jewellers</span>
+      <span><strong>Last updated:</strong> 24 November 2026</span>
+    </div>
+  </div>
+
+  <!-- ============ OPTION 1 ============ -->
+  <div class="card">
+    <div class="card-head">
+      <span class="step-badge">1</span>
+      <h2>Delete it inside the app</h2>
+    </div>
+    <span class="tag">Instant</span>
+    <p>This is the quickest way and it happens immediately, without waiting for a reply from us.</p>
+    <ol>
+      <li>Open the <strong>Shree Radha Mohan Jewellers</strong> app and sign in, if you are not already signed in.</li>
+      <li>Go to the <strong>Profile</strong> tab (bottom navigation).</li>
+      <li>Scroll down and tap <strong>&ldquo;Delete account&rdquo;</strong>.</li>
+      <li>Confirm the prompt. Your account and profile data are deleted right away.</li>
+    </ol>
+    <div class="note">
+      <strong>Note:</strong> You can only delete the account you are currently signed in with. If you
+      signed up with email and password, keep the password handy in case the app asks you to sign in
+      again before deletion.
+    </div>
+  </div>
+
+  <!-- ============ OPTION 2 ============ -->
+  <div class="card">
+    <div class="card-head">
+      <span class="step-badge">2</span>
+      <h2>Send an email request</h2>
+    </div>
+    <span class="tag">Within 30 days</span>
+    <p>
+      If you cannot open the app, have uninstalled it, or cannot sign in, email us and we will delete
+      the account for you. Please write from the <strong>same email address you used to sign in</strong>
+      to the app, so we can verify the request.
+    </p>
+
+    <div class="mail-box">
+      <div class="label">Email your deletion request to</div>
+      <a class="address" href="mailto:mohanradha209@gmail.com?subject=Account%20Deletion%20Request&body=Hello%20Shree%20Radha%20Mohan%20Jewellers%2C%0A%0APlease%20delete%20my%20account%20and%20the%20personal%20data%20linked%20to%20it.%0A%0AFull%20name%3A%20%0ARegistered%20email%3A%20%0AMobile%20number%3A%20%0ASign-in%20method%20%28Google%20%2F%20email%20and%20password%29%3A%20%0A%0AThank%20you.">mohanradha209@gmail.com</a>
+      <p class="sub">Subject: <strong>Account Deletion Request</strong></p>
+      <a class="btn" href="mailto:mohanradha209@gmail.com?subject=Account%20Deletion%20Request&body=Hello%20Shree%20Radha%20Mohan%20Jewellers%2C%0A%0APlease%20delete%20my%20account%20and%20the%20personal%20data%20linked%20to%20it.%0A%0AFull%20name%3A%20%0ARegistered%20email%3A%20%0AMobile%20number%3A%20%0ASign-in%20method%20%28Google%20%2F%20email%20and%20password%29%3A%20%0A%0AThank%20you.">Open email app</a>
+    </div>
+
+    <h3>Please include these details</h3>
+    <ul>
+      <li><strong>Full name</strong> used in the app</li>
+      <li><strong>Registered email address</strong> (the one you signed in with)</li>
+      <li><strong>Mobile number</strong> saved in your profile</li>
+      <li><strong>Sign-in method</strong> &mdash; Google, or email &amp; password</li>
+      <li>Optional: your customer ID if you have one</li>
+    </ul>
+
+    <h3>Copy-paste template</h3>
+    <div class="template">Subject: Account Deletion Request
+
+Hello Shree Radha Mohan Jewellers,
+
+Please delete my account and the personal data linked to it.
+
+Full name:
+Registered email:
+Mobile number:
+Sign-in method (Google / email and password):
+
+Thank you.</div>
+
+    <h3>What happens next</h3>
+    <ul>
+      <li>We confirm we received your request, usually within <strong>7 working days</strong>.</li>
+      <li>We may ask you a quick verification question to make sure the account belongs to you.</li>
+      <li>The account and its data are deleted within <strong>30 days</strong> of verification, and you receive a confirmation email.</li>
+    </ul>
+  </div>
+
+  <!-- ============ WHAT IS DELETED ============ -->
+  <div class="part-title">What is deleted</div>
+
+  <table>
+    <thead>
+      <tr><th>Data</th><th>What happens</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Account and sign-in credentials</td>
+        <td>Deleted &mdash; you will no longer be able to sign in with that account</td>
+      </tr>
+      <tr>
+        <td>Profile: full name, email address, mobile number</td>
+        <td>Deleted</td>
+      </tr>
+      <tr>
+        <td>Enquiries, appointment requests, plan requests and their replies</td>
+        <td>Deleted</td>
+      </tr>
+      <tr>
+        <td>Push notification token for your device</td>
+        <td>Deleted &mdash; you will stop receiving app notifications</td>
+      </tr>
+      <tr>
+        <td>Backups containing your data</td>
+        <td>Purged within 30 days</td>
+      </tr>
+      <tr>
+        <td>Records we must keep by law (e.g. tax/accounting records of an actual purchase or a signed plan)</td>
+        <td>Retained only for the period required by Indian law, then deleted</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note">
+    <strong>Not deleted:</strong> any jewellery purchase bill or gold savings plan you signed at the
+    showroom stays valid and is governed by the separate plan document and applicable law.
+    Uninstalling the app does <strong>not</strong> delete your account &mdash; you must use one of the
+    two options above.
+  </div>
+
+  <!-- ============ OTHER ============ -->
+  <div class="part-title">Good to know</div>
+
+  <h3>Deleting only some data</h3>
+  <p>
+    You do not have to delete the whole account. Write to us at
+    <a href="mailto:mohanradha209@gmail.com">mohanradha209@gmail.com</a> if you only want to correct
+    your name, change your phone number, or remove your request history. Some of these you can change
+    yourself in the app's <strong>Profile</strong> screen.
+  </p>
+
+  <h3>Accounts for children</h3>
+  <p>
+    The app is meant for users aged 18 and above. If an account was created by a child, a parent or
+    guardian can email us and we will delete it promptly.
+  </p>
+
+  <h3>Your privacy policy</h3>
+  <p>
+    Full details of what we collect, why, and how long we keep it are in our
+    <a href="index.html">Privacy Policy &amp; Terms of Use</a>.
+  </p>
+
+  <!-- ============ CONTACT ============ -->
+  <div class="contact" id="contact">
+    <h2>Contact us</h2>
+    <p>For account deletion or any data question:</p>
+    <p>
+      <strong>Shree Radha Mohan Jewellers</strong><br />
+      Email: <a href="mailto:mohanradha209@gmail.com">mohanradha209@gmail.com</a><br />
+      Phone / WhatsApp: <a href="tel:+918962335908">+91 89623 35908</a>
+    </p>
+    <p>We reply within 7 working days. Deletion is completed within 30 days.</p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; 2026 Shree Radha Mohan Jewellers. All rights reserved.
+  <br />
+  Account deletion page for the Shree Radha Mohan Jewellers Android app.
+  <br />
+  <a class="top" href="#top">&uarr; Back to top</a>
+</footer>
+
+</body>
+</html>
